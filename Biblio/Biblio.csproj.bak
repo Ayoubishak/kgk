@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DB8F111-0834-4777-8CEA-5616FCEA0FDE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Biblio</RootNamespace>
+    <AssemblyName>Biblio</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v21.1.Core.Desktop, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Google.Apis, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.55.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.55.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.55.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Books.v1, Version=1.55.0.2231, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Books.v1.1.55.0.2231\lib\net45\Google.Apis.Books.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.55.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.55.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Toaster.NET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Toaster.NET.1.0.0\lib\net40\Toaster.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ToolBelt, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Toaster.2.1.10716.0\lib\net45\ToolBelt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.38\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accueil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Accueil.Designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AffichageCodeEmplacement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AffichageCodeEmplacement.Designer.cs">
+      <DependentUpon>AffichageCodeEmplacement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auteur.Designer.cs">
+      <DependentUpon>Auteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Biblio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Biblio.Designer.cs">
+      <DependentUpon>Biblio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Collection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collection.Designer.cs">
+      <DependentUpon>Collection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connexion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Connexion.Designer.cs">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer.cs" />
+    <Compile Include="Dessinateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dessinateur.Designer.cs">
+      <DependentUpon>Dessinateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editeur.Designer.cs">
+      <DependentUpon>Editeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emplacements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emplacements.Designer.cs">
+      <DependentUpon>Emplacements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emprunteur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Emprunteur.Designer.cs">
+      <DependentUpon>Emprunteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formats.Designer.cs">
+      <DependentUpon>Formats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genre.Designer.cs">
+      <DependentUpon>Genre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeEmprunteur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListeEmprunteur.Designer.cs">
+      <DependentUpon>ListeEmprunteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Livres.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Livres.Designer.cs">
+      <DependentUpon>Livres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipale.Designer.cs">
+      <DependentUpon>MenuPrincipale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prefacier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prefacier.Designer.cs">
+      <DependentUpon>Prefacier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Provenance.Designer.cs">
+      <DependentUpon>Provenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Publics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Publics.Designer.cs">
+      <DependentUpon>Publics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecupererLivre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecupererLivre.Designer.cs">
+      <DependentUpon>RecupererLivre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scenariste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scenariste.Designer.cs">
+      <DependentUpon>Scenariste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SousGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SousGenre.Designer.cs">
+      <DependentUpon>SousGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraduitPar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraduitPar.Designer.cs">
+      <DependentUpon>TraduitPar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebLivre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebLivre.Designer.cs">
+      <DependentUpon>WebLivre.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AffichageCodeEmplacement.resx">
+      <DependentUpon>AffichageCodeEmplacement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auteur.resx">
+      <DependentUpon>Auteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Biblio.resx">
+      <DependentUpon>Biblio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collection.resx">
+      <DependentUpon>Collection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connexion.resx">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dessinateur.resx">
+      <DependentUpon>Dessinateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editeur.resx">
+      <DependentUpon>Editeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emplacements.resx">
+      <DependentUpon>Emplacements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprunteur.resx">
+      <DependentUpon>Emprunteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formats.resx">
+      <DependentUpon>Formats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genre.resx">
+      <DependentUpon>Genre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeEmprunteur.resx">
+      <DependentUpon>ListeEmprunteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Livres.resx">
+      <DependentUpon>Livres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipale.resx">
+      <DependentUpon>MenuPrincipale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prefacier.resx">
+      <DependentUpon>Prefacier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Provenance.resx">
+      <DependentUpon>Provenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Publics.resx">
+      <DependentUpon>Publics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecupererLivre.resx">
+      <DependentUpon>RecupererLivre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scenariste.resx">
+      <DependentUpon>Scenariste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SousGenre.resx">
+      <DependentUpon>SousGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraduitPar.resx">
+      <DependentUpon>TraduitPar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebLivre.resx">
+      <DependentUpon>WebLivre.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Erreur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_icon-112-search-plus_314690.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
